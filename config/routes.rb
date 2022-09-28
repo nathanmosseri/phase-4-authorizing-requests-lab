@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :members_only_articles, only: [:index, :show]
 
   get "/me", to: "users#show"
+  get '/users', to: 'users#index'
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
